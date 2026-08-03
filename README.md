@@ -23,6 +23,20 @@ The target is a production-oriented Human-Agent Workflow platform with explicit 
 - Vue-based process management workspace powered by `bpmn-js`
 - PostgreSQL persistence, Redis coordination, Flyway migrations, and architecture tests
 
+## Product preview
+
+### Workflow definition workspace
+
+![Workflow definition workspace](docs/images/workflow-definitions.png)
+
+| BPMN modeler and version management | Process instance operations |
+| --- | --- |
+| ![BPMN modeler and version management](docs/images/bpmn-designer.png) | ![Process instance operations](docs/images/process-instances.png) |
+
+| Execution tracking | Tenant access control |
+| --- | --- |
+| ![Execution tracking](docs/images/process-tracking.png) | ![Tenant access control](docs/images/access-control.png) |
+
 ## Architecture
 
 ```mermaid
