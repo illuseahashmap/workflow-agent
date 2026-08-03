@@ -101,6 +101,8 @@ workflow-agent
 
 See [Agent collaboration architecture](docs/agent-collaboration-architecture.md) for the design constraints and implementation sequence.
 
+The cross-repository quality baseline, unresolved risks, implementation order, and definition of done are maintained in the [Project governance and roadmap](docs/project-governance-roadmap.md).
+
 ## Contributing
 
 The project is in its architecture and baseline phase. Start with a focused issue before proposing a broad change, and keep backend and frontend changes aligned with their independent release boundaries. See [CONTRIBUTING.md](CONTRIBUTING.md).

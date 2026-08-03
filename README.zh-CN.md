@@ -101,6 +101,8 @@ workflow-agent
 
 详细约束和落地顺序见[《Agent 协作架构》](docs/agent-collaboration-architecture.md)。
 
+跨仓库质量基线、潜在风险、实施顺序和完成标准统一记录在[《项目治理与演进路线》](docs/project-governance-roadmap.md)。
+
 ## 参与贡献
 
 项目当前处于架构与基础能力建设阶段。大范围改动前应先创建聚焦的问题，并维持前后端独立发布边界，具体见 [CONTRIBUTING.md](CONTRIBUTING.md)。
