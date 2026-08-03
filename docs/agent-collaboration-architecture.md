@@ -41,4 +41,4 @@ sequenceDiagram
     I->>F: Trigger waiting execution
 ```
 
-The detailed backend design and decision record live in `workflow-agent-service/docs/architecture/agent-collaboration-design.md` and will be versioned with the implementation.
+The detailed backend decision record will be published under `workflow-agent-service/docs/architecture/` together with the implementation.
