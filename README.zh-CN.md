@@ -4,7 +4,9 @@
 
 Workflow Agent 是一个面向人与 Agent 协作的开放工作流平台，技术基线为 Flowable 8、Spring Boot 4、Java 25、Vue 3、PostgreSQL 和 Redis。
 
-> 项目状态：早期开发阶段。多租户工作流平台与 BPMN 管理界面已经具备，Agent Runtime 已完成架构设计，但尚未实现。
+> 开发状态：项目正在持续开发中。多租户工作流平台与 BPMN 管理界面已经具备，Agent Runtime 已完成架构设计，但尚未实现。
+>
+> 对这个方向感兴趣、已有相关想法，或希望交流与协作，欢迎随时联系：[emailnotfound@163.com](mailto:emailnotfound@163.com)。
 
 ## 项目定位
 

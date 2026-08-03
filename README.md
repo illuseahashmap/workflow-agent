@@ -4,7 +4,9 @@
 
 Workflow Agent is an open workflow platform for governed collaboration between people, BPMN processes, and AI agents. It is built around Flowable 8, Spring Boot 4, Java 25, Vue 3, PostgreSQL, and Redis.
 
-> Project status: early development. The multi-tenant workflow platform and BPMN management UI are available. The Agent Runtime is architected but not implemented yet.
+> Development status: this project is under active development. The multi-tenant workflow platform and BPMN management UI are available. The Agent Runtime is architected but not implemented yet.
+>
+> Interested in this direction or have related ideas? Feedback, discussion, and collaboration are welcome at [emailnotfound@163.com](mailto:emailnotfound@163.com).
 
 ## Why this project
 
