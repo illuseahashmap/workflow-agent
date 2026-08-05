@@ -27,27 +27,27 @@ Workflow Agent 是一个面向人与 Agent 协作的开放工作流平台，技�
 
 ### 登录体验
 
-<p><img src="docs/images/login.png" alt="登录体验" width="65%"></p>
+<p><img src="docs/images/login.png" alt="登录体验"></p>
 
 ### 流程定义工作台
 
-<p><img src="docs/images/workflow-definitions.png" alt="流程定义工作台" width="65%"></p>
+<p><img src="docs/images/workflow-definitions.png" alt="流程定义工作台"></p>
 
 ### BPMN 建模与版本管理
 
-<p><img src="docs/images/bpmn-designer.png" alt="BPMN 建模与版本管理" width="65%"></p>
+<p><img src="docs/images/bpmn-designer.png" alt="BPMN 建模与版本管理"></p>
 
 ### 流程实例操作
 
-<p><img src="docs/images/process-instances.png" alt="流程实例操作" width="65%"></p>
+<p><img src="docs/images/process-instances.png" alt="流程实例操作"></p>
 
 ### 流程执行跟踪
 
-<p><img src="docs/images/process-tracking.png" alt="流程执行跟踪" width="65%"></p>
+<p><img src="docs/images/process-tracking.png" alt="流程执行跟踪"></p>
 
 ### 租户与成员权限管理
 
-<p><img src="docs/images/access-control.png" alt="租户与成员权限管理" width="65%"></p>
+<p><img src="docs/images/access-control.png" alt="租户与成员权限管理"></p>
 
 ## 总体架构
 
