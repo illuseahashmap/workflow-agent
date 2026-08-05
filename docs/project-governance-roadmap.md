@@ -10,8 +10,8 @@ The project is currently suitable for internal evaluation and controlled pilots.
 
 Detailed repository rules:
 
-- [Backend governance and roadmap](https://github.com/illuseahashmap/workflow-agent-service/blob/init/docs/quality/architecture-governance-and-roadmap.md)
-- [Frontend governance and roadmap](https://github.com/illuseahashmap/workflow-agent-web/blob/init/docs/quality/frontend-governance-and-roadmap.md)
+- [Backend governance and roadmap](https://github.com/illuseahashmap/workflow-agent-service/blob/main/docs/quality/architecture-governance-and-roadmap.md)
+- [Frontend governance and roadmap](https://github.com/illuseahashmap/workflow-agent-web/blob/main/docs/quality/frontend-governance-and-roadmap.md)
 
 ## Non-negotiable boundaries
 

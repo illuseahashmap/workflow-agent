@@ -29,13 +29,21 @@ The target is a production-oriented Human-Agent Workflow platform with explicit 
 
 ![Workflow definition workspace](docs/images/workflow-definitions.png)
 
-| BPMN modeler and version management | Process instance operations |
-| --- | --- |
-| ![BPMN modeler and version management](docs/images/bpmn-designer.png) | ![Process instance operations](docs/images/process-instances.png) |
+### BPMN modeler and version management
 
-| Execution tracking | Tenant access control |
-| --- | --- |
-| ![Execution tracking](docs/images/process-tracking.png) | ![Tenant access control](docs/images/access-control.png) |
+![BPMN modeler and version management](docs/images/bpmn-designer.png)
+
+### Process instance operations
+
+![Process instance operations](docs/images/process-instances.png)
+
+### Execution tracking
+
+![Execution tracking](docs/images/process-tracking.png)
+
+### Tenant access control
+
+![Tenant access control](docs/images/access-control.png)
 
 ## Architecture
 
