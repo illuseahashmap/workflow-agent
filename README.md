@@ -25,13 +25,13 @@ The target is a production-oriented Human-Agent Workflow platform with explicit 
 
 ## Product preview
 
-### Workflow definition workspace
-
-<p><img src="docs/images/workflow-definitions.png" alt="Workflow definition workspace" width="80%"></p>
-
 ### Login experience
 
 <p><img src="docs/images/login.png" alt="Login experience" width="80%"></p>
+
+### Workflow definition workspace
+
+<p><img src="docs/images/workflow-definitions.png" alt="Workflow definition workspace" width="80%"></p>
 
 ### BPMN modeler and version management
 
