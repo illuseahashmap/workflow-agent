@@ -2,9 +2,9 @@
 
 [English](README.md)
 
-Workflow Agent 是一个面向人与 Agent 协作的开放工作流平台，技术基线为 Flowable 8、Spring Boot 4、Java 25、Vue 3、PostgreSQL 和 Redis。
+Workflow Agent 是一个基于 Flowable OSS 的开源、Java-first 企业人机协作工作流平台，技术基线为 Flowable 8、Spring Boot 4、Java 25、Vue 3、PostgreSQL 和 Redis。
 
-> 开发状态：项目正在持续开发中。多租户工作流平台与 BPMN 管理界面已经具备，Agent Runtime 已完成架构设计，但尚未实现。
+> 开发状态：项目正在持续开发中。多租户工作流平台与 BPMN 管理界面已经具备；Agent 定义、Provider 和运行账本基础已经实现，生产级执行闭环仍在建设。
 >
 > 对这个方向感兴趣、已有相关想法，或希望交流与协作，欢迎随时联系：[emailnotfound@163.com](mailto:emailnotfound@163.com)。
 
@@ -12,7 +12,9 @@ Workflow Agent 是一个面向人与 Agent 协作的开放工作流平台，技�
 
 多数 Agent 编排产品让 Agent 成为总控。Workflow Agent 采用不同边界：由 BPMN 持有可持久化的业务状态，并明确控制 Agent 何时执行、等待人工、调用工具，以及如何在失败后恢复。
 
-项目目标是形成生产导向的 Human-Agent Workflow 平台，重点解决租户隔离、权限、审计、幂等、人工审批和可恢复执行，而不是只提供模型调用演示。
+项目不替代 Flowable，也不复制 Dify。目标是在 Flowable OSS 执行原语之上补齐企业审批业务语义，并形成可持久化、受治理的 Human-Agent Workflow 能力，而不是只提供模型调用演示。
+
+完整定位、产品边界和阶段目标见[《Workflow Agent 产品定位与目标》](docs/product-positioning-and-goals.zh-CN.md)。
 
 ## 当前能力
 
@@ -108,10 +110,11 @@ workflow-agent
 
 ## 路线图
 
-1. 稳定工作流、租户、权限和派单规则基线。
-2. 实现可持久化 Agent Run、模型凭据、执行检查点和受治理工具调用。
-3. 实现 Agent 协作节点、User Task Copilot 和显式人工复核。
-4. 发布版本化部署资产、业务样例、可观测性和故障恢复测试。
+1. 完成生产基线和企业工作流业务语义。
+2. 完成 Agent Runtime 生产执行闭环。
+3. 实现自主节点、人工复核和 User Task Copilot。
+4. 实现可测试的人机协作流程生成器。
+5. 扩展知识、工具、连接器和流程智能。
 
 详细约束和落地顺序见[《Agent 协作架构》](docs/agent-collaboration-architecture.md)。
 

@@ -2,9 +2,9 @@
 
 [简体中文](README.zh-CN.md)
 
-Workflow Agent is an open workflow platform for governed collaboration between people, BPMN processes, and AI agents. It is built around Flowable 8, Spring Boot 4, Java 25, Vue 3, PostgreSQL, and Redis.
+Workflow Agent is an open-source, Java-first enterprise Human-Agent Workflow platform built on Flowable OSS. It is built around Flowable 8, Spring Boot 4, Java 25, Vue 3, PostgreSQL, and Redis.
 
-> Development status: this project is under active development. The multi-tenant workflow platform and BPMN management UI are available. The Agent Runtime is architected but not implemented yet.
+> Development status: this project is under active development. The multi-tenant workflow platform and BPMN management UI are available. Agent definitions, providers, and the runtime ledger foundation are implemented; the production execution loop remains in progress.
 >
 > Interested in this direction or have related ideas? Feedback, discussion, and collaboration are welcome at [emailnotfound@163.com](mailto:emailnotfound@163.com).
 
@@ -12,7 +12,9 @@ Workflow Agent is an open workflow platform for governed collaboration between p
 
 Most agent builders treat the agent as the orchestrator. Workflow Agent takes the opposite approach: BPMN owns durable business state and governs when an agent may act, wait for a person, invoke a tool, or resume after failure.
 
-The target is a production-oriented Human-Agent Workflow platform with explicit tenancy, permissions, auditability, idempotency, human approval, and recoverable execution.
+The project neither replaces Flowable nor copies Dify. It adds enterprise approval semantics above Flowable OSS and combines them with a durable, governed Agent Runtime.
+
+See the [product positioning and goals](docs/product-positioning-and-goals.zh-CN.md) for the product boundary and staged objectives.
 
 ## Current capabilities
 
@@ -108,10 +110,11 @@ workflow-agent
 
 ## Roadmap
 
-1. Stabilize the workflow, tenancy, permission, and assignment-rule baseline.
-2. Implement durable Agent Runs, provider credentials, checkpoints, and governed tool calls.
-3. Add Agent collaboration nodes, User Task Copilot, and explicit human review.
-4. Publish versioned deployment assets, examples, observability, and recovery tests.
+1. Complete the production baseline and enterprise workflow semantics.
+2. Complete the production Agent Runtime execution loop.
+3. Add autonomous nodes, human review, and User Task Copilot.
+4. Build a testable Collaborative Process Generator.
+5. Expand knowledge, tools, connectors, and process intelligence.
 
 See [Agent collaboration architecture](docs/agent-collaboration-architecture.md) for the design constraints and implementation sequence.
 

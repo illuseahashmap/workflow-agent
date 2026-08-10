@@ -1,10 +1,12 @@
 # Project Governance and Roadmap
 
-Last updated: 2026-08-03
+Last updated: 2026-08-10
 
 ## Purpose
 
 This document is the cross-repository engineering contract for Workflow Agent. It records the risks that remain after the current workflow-platform baseline and defines the order in which the platform must evolve before implementing a production Agent Runtime.
+
+Product positioning, differentiation, and staged product outcomes are defined separately in the [Product Positioning and Goals](product-positioning-and-goals.zh-CN.md). This document governs engineering quality and implementation order; it does not redefine product strategy.
 
 The project is currently suitable for internal evaluation and controlled pilots. It is not yet presented as a production-ready public multi-tenant SaaS. New capabilities must preserve security, tenancy, auditability, recoverability, and repository release boundaries.
 
@@ -29,13 +31,13 @@ Detailed repository rules:
 | --- | --- | --- |
 | P0 | Authentication and browser sessions are not yet an enterprise identity solution | Add revocation, rotation, secure browser sessions, and an OAuth 2.1/OIDC provider boundary |
 | P0 | Observability and workflow audit are incomplete | Add trace IDs, structured logs, metrics, alerts, immutable workflow audit, and failed-command operations |
-| P0 | Frontend CI and real full-stack E2E are missing | Run the frontend quality gate and real PostgreSQL/Redis/backend workflow scenarios in CI |
+| P0 | Real cross-repository full-stack E2E remains incomplete | Run PostgreSQL/Redis/backend/frontend workflow scenarios in CI and retain test evidence |
 | P1 | Backend runtime services and frontend views/styles are growing too large | Split by use case, domain policy, adapter, composable, and reusable component |
 | P1 | API response models still need stronger cross-repository governance | The backend now exposes a full OpenAPI route contract with lint, endpoint coverage, and PR compatibility checks; next add generated or validated client models |
-| P1 | Tenant isolation still depends heavily on correct application queries | Add repository-level defaults, comprehensive negative tests, and evaluate PostgreSQL RLS |
+| P1 | Flowable internal-table tenant ownership still needs deeper verification | Keep explicit tenant predicates and PostgreSQL RLS for platform tables; add negative tests and assess engine-table ownership boundaries |
 | P1 | Test coverage gates are below the desired production baseline | Raise line and branch thresholds progressively around security, tenancy, concurrency, and recovery |
 | P2 | Workflow product capabilities remain incomplete | Add task center, organization directory, groups, forms, notifications, delegation, SLA, and escalation |
-| P2 | Agent Runtime has no implemented domain model | Design durable runs, steps, checkpoints, provider credentials, tool policies, human approval, cost limits, and audit before code |
+| P1 | Agent Runtime foundation is implemented but not production-complete | Finish output policy validation, lease recovery, provider egress controls, scheduler isolation, BPMN integration, cancellation, and failure testing |
 
 ## Required implementation order
 
@@ -54,16 +56,27 @@ Detailed repository rules:
 
 ### 3. Build the Agent Runtime
 
-- Create durable `AgentDefinition`, `AgentRun`, `AgentStep`, checkpoint, and execution-event models.
-- Isolate model providers and encrypted credentials behind application ports.
+- Build on the existing `AgentDefinition`, `AgentRun`, `AgentStep`, checkpoint, and execution-event foundation to complete lease recovery, result validation, cancellation, and fault handling.
+- Keep model providers and encrypted credentials isolated behind application ports, and add egress controls and credential rotation.
 - Govern every tool with schema validation, tenant permissions, idempotency, timeout, audit, and optional human approval.
 - Integrate agent execution with BPMN through durable events or commands, never hidden in-process state.
 - Support pause, resume, cancel, retry, compensation, budget limits, and reproducible model/prompt version evidence.
 
-### 4. Add higher-level experiences
+### 4. Add human-agent collaboration
 
-- Build kanban, copilot, and Dify-like authoring experiences on the same identity, tenancy, audit, runtime, and design-system foundations.
-- Do not create separate security models or execution engines for different user interfaces.
+- Build autonomous Agent nodes, explicit human review, User Task Copilot, governed retrieval, and tool approval on the same identity, tenancy, audit, runtime, and design-system foundations.
+- Do not create separate security models or execution engines for different collaboration modes.
+
+### 5. Add collaborative process generation
+
+- Generate a versioned semantic IR before BPMN, then compile and lay out BPMN deterministically.
+- Generate Agent, rule, assignment, knowledge, tool, failure-policy, and test drafts as one versioned release candidate.
+- Require static validation, scenario tests, Agent evaluations, and human review before publishing.
+
+### 6. Expand knowledge, connectors, and process intelligence
+
+- Add knowledge and connector implementations through governed ports without moving business truth out of BPMN.
+- Use runtime evidence for quality, cost, bottleneck, and optimization analysis; never mutate production definitions automatically.
 
 ## Cross-repository definition of done
 

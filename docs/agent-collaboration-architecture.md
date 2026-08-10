@@ -1,5 +1,7 @@
 # Agent Collaboration Architecture
 
+Product positioning and staged outcomes are defined in the [Product Positioning and Goals](product-positioning-and-goals.zh-CN.md). This document is a cross-repository architecture summary; the backend repository owns the detailed runtime design and implementation plan.
+
 ## Design position
 
 Flowable owns BPMN execution and durable business state. The Agent Runtime owns model calls, conversations, governed tool execution, structured output, checkpoints, cost, and run status. Neither side writes directly into the other side's internal tables.
@@ -41,4 +43,14 @@ sequenceDiagram
     I->>F: Trigger waiting execution
 ```
 
-The detailed backend decision record will be published under `workflow-agent-service/docs/architecture/` together with the implementation.
+## Design-time collaborative process generation
+
+The planned generator does not ask an LLM to write final BPMN XML. It produces a versioned semantic IR, generates the process skeleton before filling node details, and uses deterministic Flowable model compilation and layout. The release candidate also contains Agent, rule, assignment, knowledge, tool, human-review, failure-policy, and test drafts.
+
+Generated assets remain drafts until static validation, path and scenario tests, Agent evaluations, and authorized human review pass. The generator is a design-time Copilot; it does not become a second workflow engine or share the Agent Runtime state machine.
+
+Detailed backend records:
+
+- [Agent collaboration design](https://github.com/illuseahashmap/workflow-agent-service/blob/main/docs/architecture/agent-collaboration-design.md)
+- [Agent MVP implementation plan](https://github.com/illuseahashmap/workflow-agent-service/blob/main/docs/architecture/agent-mvp-implementation-plan.md)
+- [Backend project status](https://github.com/illuseahashmap/workflow-agent-service/blob/main/docs/status.md)
