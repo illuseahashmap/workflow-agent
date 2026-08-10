@@ -68,8 +68,8 @@ flowchart LR
 
 | 组件 | 职责 |
 | --- | --- |
-| [`workflow-agent-service`](https://github.com/illuseahashmap/workflow-agent-service) | Maven 多模块后端、Flowable 集成、安全、租户、规则以及未来的 Agent Runtime |
-| [`workflow-agent-web`](https://github.com/illuseahashmap/workflow-agent-web) | Vue 3 管理界面与 BPMN 设计器 |
+| [`workflow-agent-service`](https://github.com/illuseahashmap/workflow-agent-service) | Maven 多模块后端，包含 Flowable、认证、租户、规则、Agent 定义、Provider、可靠运行账本、OpenAPI 治理和 PostgreSQL RLS |
+| [`workflow-agent-web`](https://github.com/illuseahashmap/workflow-agent-web) | Vue 3 管理界面、BPMN 设计器、Agent 管理、Provider 配置和运行诊断 |
 
 ## 快速启动
 
@@ -85,6 +85,8 @@ docker compose up --build
 浏览器访问 `http://localhost:5174`，默认本地管理员账号从 `.env` 读取。
 
 示例凭据只能用于本机评估，对外暴露服务前必须替换。后端 API 地址为 `http://localhost:8080`，健康检查地址为 `http://localhost:8080/actuator/health`。
+
+当前后端已经具备 Agent 管理和模型执行基础：版本化 Agent 定义、加密 Provider 凭据、Mock/OpenAI Compatible Adapter、Worker 租约、Attempt、Step、Checkpoint、状态历史和模型调用记录。下一阶段重点是生产级执行闭环，包括 BPMN Agent 节点、取消、恢复接管、人工确认、工具权限和完整可观测性。
 
 如果克隆时没有拉取子模块：
 

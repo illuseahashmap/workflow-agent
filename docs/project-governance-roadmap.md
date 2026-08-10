@@ -31,7 +31,7 @@ Detailed repository rules:
 | P0 | Observability and workflow audit are incomplete | Add trace IDs, structured logs, metrics, alerts, immutable workflow audit, and failed-command operations |
 | P0 | Frontend CI and real full-stack E2E are missing | Run the frontend quality gate and real PostgreSQL/Redis/backend workflow scenarios in CI |
 | P1 | Backend runtime services and frontend views/styles are growing too large | Split by use case, domain policy, adapter, composable, and reusable component |
-| P1 | API models are maintained manually across repositories | Adopt OpenAPI, compatibility checks, and generated or validated client contracts |
+| P1 | API response models still need stronger cross-repository governance | The backend now exposes a full OpenAPI route contract with lint, endpoint coverage, and PR compatibility checks; next add generated or validated client models |
 | P1 | Tenant isolation still depends heavily on correct application queries | Add repository-level defaults, comprehensive negative tests, and evaluate PostgreSQL RLS |
 | P1 | Test coverage gates are below the desired production baseline | Raise line and branch thresholds progressively around security, tenancy, concurrency, and recovery |
 | P2 | Workflow product capabilities remain incomplete | Add task center, organization directory, groups, forms, notifications, delegation, SLA, and escalation |

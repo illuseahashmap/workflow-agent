@@ -68,8 +68,8 @@ The source remains split into independently releasable repositories. This reposi
 
 | Component | Responsibility |
 | --- | --- |
-| [`workflow-agent-service`](https://github.com/illuseahashmap/workflow-agent-service) | Maven multi-module backend, Flowable integration, security, tenancy, rules, and the future Agent Runtime |
-| [`workflow-agent-web`](https://github.com/illuseahashmap/workflow-agent-web) | Vue 3 management UI and BPMN modeler |
+| [`workflow-agent-service`](https://github.com/illuseahashmap/workflow-agent-service) | Maven multi-module backend with Flowable, authentication, tenancy, rules, Agent definitions, Providers, reliable Agent runs, OpenAPI governance, and PostgreSQL RLS |
+| [`workflow-agent-web`](https://github.com/illuseahashmap/workflow-agent-web) | Vue 3 management UI, BPMN modeler, Agent management, Provider configuration, and run diagnostics |
 
 ## Quick start
 
@@ -85,6 +85,8 @@ docker compose up --build
 Open `http://localhost:5174`. The default local administrator values are read from `.env`.
 
 The included credentials are only for local evaluation. Replace them before exposing the services to another machine. The backend API is available at `http://localhost:8080`, and its health endpoint is `http://localhost:8080/actuator/health`.
+
+The backend currently provides the Agent management and model execution foundation: versioned Agent definitions, encrypted Provider credentials, Mock/OpenAI-compatible adapters, Worker leases, Attempts, Steps, Checkpoints, state history, and model invocation records. The next Agent milestone is the production execution loop: BPMN Agent nodes, cancellation, recovery takeover, human confirmation, tool policy, and full observability.
 
 If the repository was cloned without submodules:
 
