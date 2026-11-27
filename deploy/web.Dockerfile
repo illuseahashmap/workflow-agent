@@ -3,7 +3,7 @@ FROM node:24-alpine AS build
 WORKDIR /workspace
 RUN corepack enable
 COPY workflow-agent-web/package.json workflow-agent-web/pnpm-lock.yaml workflow-agent-web/pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store pnpm install --frozen-lockfile
 COPY workflow-agent-web/ ./
 RUN pnpm build
 

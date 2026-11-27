@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27",
+  "productionReady": false,
+  "repositories": {
+    "workflow-agent-service": "bdb8f27821eada2ee6127a31b622f8e2d4ecafc5",
+    "workflow-agent-web": "09e916759f0dc6a5f6c85ffe2df54f1dbcb3a4fd"
+  },
+  "acceptance": "workflow-agent-service/docs/quality/integration-hardening-20261127.md"
+}

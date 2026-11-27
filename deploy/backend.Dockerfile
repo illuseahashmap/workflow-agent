@@ -2,7 +2,7 @@ FROM maven:3.9.16-eclipse-temurin-25 AS build
 
 WORKDIR /workspace
 COPY workflow-agent-service/ ./
-RUN mvn -pl workflow-boot -am -DskipTests package
+RUN --mount=type=cache,target=/root/.m2 bash ./mvnw --batch-mode --no-transfer-progress -pl workflow-boot -am -DskipTests package
 
 FROM eclipse-temurin:25-jre
 

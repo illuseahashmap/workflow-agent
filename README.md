@@ -147,3 +147,6 @@ The project is in its architecture and baseline phase. Start with a focused issu
 ## License
 
 A project license has not been selected yet. Do not treat the current public source as permission for production redistribution until a license is added.
+
+
+[2026-11-27 集成交付与验收边界](docs/integration-release-20261127.md)
