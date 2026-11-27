@@ -4,7 +4,7 @@
   "productionReady": false,
   "repositories": {
     "workflow-agent-service": "40c5cfd9a9500fcaeca91e8379961ae2b371b5b5",
-    "workflow-agent-web": "09e916759f0dc6a5f6c85ffe2df54f1dbcb3a4fd"
+    "workflow-agent-web": "f0683b38d8f3f3824dddf7a71ecbe74578b226ba"
   },
   "acceptance": "workflow-agent-service/docs/quality/model-reliability-20261127.md"
 }
