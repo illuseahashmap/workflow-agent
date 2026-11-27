@@ -3,7 +3,7 @@
   "date": "2026-11-27",
   "productionReady": false,
   "repositories": {
-    "workflow-agent-service": "a8ee1e2846d3012ad1647d5a77f2f4c6b073fae6",
+    "workflow-agent-service": "40c5cfd9a9500fcaeca91e8379961ae2b371b5b5",
     "workflow-agent-web": "09e916759f0dc6a5f6c85ffe2df54f1dbcb3a4fd"
   },
   "acceptance": "workflow-agent-service/docs/quality/model-reliability-20261127.md"
