@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "productionReady": false,
   "repositories": {
-    "workflow-agent-service": "40c5cfd9a9500fcaeca91e8379961ae2b371b5b5",
-    "workflow-agent-web": "f0683b38d8f3f3824dddf7a71ecbe74578b226ba"
+    "workflow-agent-service": "75aa925854d39630660c2461c9b9450af620adad",
+    "workflow-agent-web": "5ce9002689d0d3f41d2b6b801a043d48b570e7a0"
   },
-  "acceptance": "workflow-agent-service/docs/quality/model-reliability-20261127.md"
+  "acceptance": "workflow-agent-service/docs/quality/branch-integration-20261128.md"
 }
