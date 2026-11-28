@@ -3,8 +3,8 @@
   "date": "2026-11-28",
   "productionReady": false,
   "repositories": {
-    "workflow-agent-service": "75aa925854d39630660c2461c9b9450af620adad",
-    "workflow-agent-web": "5ce9002689d0d3f41d2b6b801a043d48b570e7a0"
+    "workflow-agent-service": "587c1bc7f7fe9e0dae356f3af5e8ffbe6dad1de4",
+    "workflow-agent-web": "1557c7892920f2b2bc65564904c178c6e078fefe"
   },
   "acceptance": "workflow-agent-service/docs/quality/branch-integration-20261128.md"
 }

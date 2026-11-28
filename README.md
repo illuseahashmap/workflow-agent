@@ -94,6 +94,8 @@ The source remains split into independently releasable repositories. This reposi
 
 ## Quick start
 
+For AI handoff, environment installation, configuration, SQL initialization and troubleshooting, start with [AI bootstrap guide](docs/AI-BOOTSTRAP.md) and [AGENTS.md](AGENTS.md).
+
 Requirements: Git, Docker Engine, and Docker Compose.
 
 ```bash

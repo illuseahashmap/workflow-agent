@@ -16,5 +16,9 @@ jobs:
           submodules: recursive
       - name: Verify frozen source revisions
         run: python3 scripts/check-release.py
+      - name: Verify disposable test runner safeguards
+        run: python3 -m unittest discover -s scripts -p test_local_runner.py
+      - name: Validate local Compose template
+        run: docker compose --env-file .env.example config --quiet
       - name: Build the integrated frontend and backend
         run: docker compose build

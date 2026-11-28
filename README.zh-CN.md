@@ -94,6 +94,8 @@ flowchart LR
 
 ## 快速启动
 
+AI 接手请先读 [环境安装与首次启动指南](docs/AI-BOOTSTRAP.md) 和 [AGENTS.md](AGENTS.md)，涵盖配置、SQL/基础数据初始化、旧库升级、可选 LangGraph 与验收。
+
 环境要求：Git、Docker Engine、Docker Compose。
 
 ```bash
